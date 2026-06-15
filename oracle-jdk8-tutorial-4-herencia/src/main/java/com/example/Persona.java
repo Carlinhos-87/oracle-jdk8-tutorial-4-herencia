@@ -54,5 +54,8 @@ public class Persona {
 		this.genero = genero;
 	}
 	
-	
+	//Metodo que muestra el horario de comida de una persona 
+	public void muestraHorarioDeComida() {
+		System.out.println("Una persona come entre las 13:00 y las 16:00");
+	}
 }

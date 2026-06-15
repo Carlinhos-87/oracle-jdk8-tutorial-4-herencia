@@ -40,7 +40,9 @@ public class App {
     	
     	Empleado empleado4 = new Empleado("Carlos", "Paino", "Agueda", Genero.HOMBRE, new BigDecimal(2500), Departamento.INFORMATICA);
     	
+    	//Mostrar el horario de comida del empleado4
     	
+    	empleado4.muestraHorarioDeComida();
     }
     	
     	

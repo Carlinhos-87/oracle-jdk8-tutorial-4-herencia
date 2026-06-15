@@ -75,6 +75,12 @@ public class Empleado extends Persona {
 				+ ", getGenero()=" + getGenero() + "]";
 	}
 
+	@Override
+	public void muestraHorarioDeComida() {
+		// TODO Auto-generated method stub
+		System.out.println("Un empleado come entre las 14:00 y las 15:30 horas");
+	}
+
 	
 	
 }
