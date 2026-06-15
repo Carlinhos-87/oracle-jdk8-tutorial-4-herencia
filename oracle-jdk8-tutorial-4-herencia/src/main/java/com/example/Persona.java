@@ -1,5 +1,32 @@
 package com.example;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@SuperBuilder
+
+
+/* Si la clase no participa en la herencia, se anota con la anotacion
+ * @Builder, pero si participa en la herencia se anota con @SuperBuilder
+ * 
+ * Recordar que el patron Builder es un patron factoria, creacional, es
+ * decir, que sirve para crear o instanciar objetos sin necesidad de 
+ * utilizar el operador new ni tener los constructores explicitamente*/
+
 public class Persona {
 	
 	private String nombre;
@@ -7,55 +34,5 @@ public class Persona {
 	private String segundoApellido;
 	private Genero genero;
 	
-	public Persona() {
-		super();
-		// TODO Auto-generated constructor stub
-		
-	}
-
-	public Persona(String nombre, String primerApellido, String segundoApellido, Genero genero) {
-		super();
-		this.nombre = nombre;
-		this.primerApellido = primerApellido;
-		this.segundoApellido = segundoApellido;
-		this.genero = genero;
-	}
-
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getPrimerApellido() {
-		return primerApellido;
-	}
-
-	public void setPrimerApellido(String primerApellido) {
-		this.primerApellido = primerApellido;
-	}
-
-	public String getSegundoApellido() {
-		return segundoApellido;
-	}
-
-	public void setSegundoApellido(String segundoApellido) {
-		this.segundoApellido = segundoApellido;
-	}
-
-	public Genero getGenero() {
-		return genero;
-	}
-
-	public void setGenero(Genero genero) {
-		this.genero = genero;
-	}
 	
-	//Metodo que muestra el horario de comida de una persona 
-	public void muestraHorarioDeComida() {
-		System.out.println("Una persona come entre las 13:00 y las 16:00");
-	}
 }

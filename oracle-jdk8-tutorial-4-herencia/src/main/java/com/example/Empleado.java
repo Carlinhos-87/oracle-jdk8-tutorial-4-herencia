@@ -20,67 +20,26 @@ package com.example;
 
 import java.math.BigDecimal;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString (callSuper = true)
+@EqualsAndHashCode (callSuper = true)
+@SuperBuilder
+
 public class Empleado extends Persona {
 
 	private BigDecimal salario;
 	private Departamento departamento;
-	
-	public Empleado() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Empleado(String nombre, String primerApellido, String segundoApellido, Genero genero) {
-		super(nombre, primerApellido, segundoApellido, genero);
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Empleado(BigDecimal salario, Departamento departamento) {
-		super();
-		this.salario = salario;
-		this.departamento = departamento;
-	}
-	
-	/*Generar un constructor que permita instanciar un empleado con los campos de Persona
-	 * y los propios de Empleado*/
-	
-	public Empleado(String nombre, String primerApellido, String segundoApellido, Genero genero, BigDecimal salario,
-			Departamento departamento) {
-		super(nombre, primerApellido, segundoApellido, genero);
-		this.salario = salario;
-		this.departamento = departamento;
-	}
-
-	public BigDecimal getSalario() {
-		return salario;
-	}
-
-	
-	public void setSalario(BigDecimal salario) {
-		this.salario = salario;
-	}
-
-	public Departamento getDepartamento() {
-		return departamento;
-	}
-
-	public void setDepartamento(Departamento departamento) {
-		this.departamento = departamento;
-	}
-
-	@Override
-	public String toString() {
-		return "Empleado [salario=" + salario + ", departamento=" + departamento + ", getNombre()=" + getNombre()
-				+ ", getPrimerApellido()=" + getPrimerApellido() + ", getSegundoApellido()=" + getSegundoApellido()
-				+ ", getGenero()=" + getGenero() + "]";
-	}
-
-	@Override
-	public void muestraHorarioDeComida() {
-		// TODO Auto-generated method stub
-		System.out.println("Un empleado come entre las 14:00 y las 15:30 horas");
-	}
-
 	
 	
 }
